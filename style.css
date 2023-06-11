@@ -1,0 +1,25 @@
+body, header, footer, section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header, footer, section{
+    margin: 50px;
+}
+
+
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    border: 1px solid red;
+    justify-content: center;
+}
+
+.grid-box{
+    border: 1px solid black;
+    width: 22px;
+    height: 22px;
+}
+
