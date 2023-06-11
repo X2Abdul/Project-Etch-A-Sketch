@@ -1,9 +1,9 @@
-body, header, footer, section{
+body, header, footer, .gridInput, .helper{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-header, footer, section{
+header, footer, .gridInput, .helper{
     margin: 50px;
 }
 
@@ -19,7 +19,7 @@ main{
 
 .grid-box{
     border: 1px solid black;
-    width: 22px;
-    height: 22px;
+    width: 23px;
+    height: 23px;
 }
 
