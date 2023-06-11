@@ -2,6 +2,8 @@
 const grid = document.querySelector("main");
 const gridInput = document.querySelector('.createGridBtn');
 
+let globalColor = 'red';
+
 for(let i = 0; i < 256; i++){
     const gridBox = document.createElement('div');
     const gridNo = document.createElement('p');
@@ -11,10 +13,10 @@ for(let i = 0; i < 256; i++){
     grid.appendChild(gridBox);
 
     gridBox.addEventListener('mouseenter', () => {
-        gridBox.style.backgroundColor = 'aqua';
+        gridBox.style.backgroundColor = globalColor;
     });
     gridBox.addEventListener('mouseleave', () => {
-        gridBox.style.backgroundColor = 'aqua';
+        gridBox.style.backgroundColor = globalColor;
     });
 }
 
@@ -40,11 +42,11 @@ gridInput.addEventListener('click', function() {
           grid.appendChild(gridBox);
       
           gridBox.addEventListener('mouseenter', () => {
-            gridBox.style.backgroundColor = 'aqua';
+            gridBox.style.backgroundColor = globalColor;
           });
           
           gridBox.addEventListener('mouseleave', () => {
-            gridBox.style.backgroundColor = 'aqua';
+            gridBox.style.backgroundColor = globalColor;
           });
         }
       }
@@ -59,5 +61,16 @@ button.addEventListener('click', function() {
     const gridBoxes = document.querySelectorAll('.grid-box');
     gridBoxes.forEach(box => {
         box.style.backgroundColor = 'white';
+    });
+});
+
+//setting colors to color divs
+
+const colorBoxes = document.querySelectorAll('.color');
+colorBoxes.forEach(color => {
+    color.style.backgroundColor = color.id;
+
+    color.addEventListener('click', function(){
+        globalColor = color.id;
     });
 });
